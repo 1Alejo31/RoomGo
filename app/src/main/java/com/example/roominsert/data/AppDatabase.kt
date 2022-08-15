@@ -1,6 +1,7 @@
 package com.example.roominsert.data
 
 import androidx.room.Database
+import androidx.room.RoomDatabase
 import com.example.roominsert.dao.BockDao
 import com.example.roominsert.model.BookEntity
 
@@ -13,9 +14,9 @@ import com.example.roominsert.model.BookEntity
 
 )
 
-abstract class AppDatabase {
+abstract class AppDatabase: RoomDatabase() {
 
-    abstract val booksDao: BockDao
+    abstract val bookDao: BockDao
 
     companion object {
 
